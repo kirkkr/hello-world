@@ -3,7 +3,7 @@
   hosts: all
   
   vars_files:
-    - password.yml
+    - ansible_cfg.yml
 
   roles: 
     - hello-world
