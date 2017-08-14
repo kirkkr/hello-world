@@ -3,7 +3,7 @@
   hosts: all
   
   vars_files:
-    - ./Ansible/password.yml
+    - ./password.yml
 
   roles: 
     - hello-world
