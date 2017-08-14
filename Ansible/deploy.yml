@@ -1,5 +1,6 @@
-- name: hello-world Deployment
+- name: "hello-world Deployment"
 
   hosts: all
 
-  roles: hello-world
+  roles: 
+    - hello-world
