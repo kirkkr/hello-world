@@ -9,7 +9,7 @@
       become: true
       file:
         path: "/var/www/html/hello-world"
-        state; directory
+        state: directory
         owner: root
         group: root
         mode: 0644
