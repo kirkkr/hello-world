@@ -1,0 +1,23 @@
+---
+- name: "Remove current filesystem"
+  become: true
+  file:
+    path: "/var/www/html/hello-world"
+    state: absent
+    
+- name: "Recreate target filesystem"
+  become: true
+  file:
+    path: "/var/www/html/hello-world"
+    state; directory
+    owner: root
+    group: root
+    mode: 0644
+    
+- name: "Copy files"
+  copy:
+    src: "*"
+    dest: "/var/www/html/hello-world"
+    owner: root
+    group: root
+    mode: 0644

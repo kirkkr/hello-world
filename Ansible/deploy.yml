@@ -1,0 +1,6 @@
+---
+- name: hello-world Deployment
+
+  hosts: all
+  
+  roles: hello-world
