@@ -3,7 +3,7 @@
   hosts: all
   
   vars_files:
-    - ./password.yml
+    - password.yml
 
   roles: 
     - hello-world
