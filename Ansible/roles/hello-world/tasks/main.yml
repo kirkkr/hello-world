@@ -15,9 +15,13 @@
     mode: 0644
     
 - name: "Copy files"
+  become: true
   copy:
     src: "*"
     dest: "/var/www/html/hello-world"
     owner: root
     group: root
     mode: 0644
+    
+- name: "Deployment Complete"
+  debug: msg="Finished"
