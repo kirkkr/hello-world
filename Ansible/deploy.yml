@@ -1,6 +1,9 @@
 - name: "hello-world Deployment"
 
   hosts: all
+  
+  vars_files:
+    - ./Ansible/password.yml
 
   roles: 
     - hello-world
