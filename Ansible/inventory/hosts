@@ -1,0 +1,10 @@
+[all]
+web
+
+[all:vars]
+ansible_ssh_user=ansible
+ansible_ssh_pass=ansible
+ansible_host_key_checking=false
+
+[web]
+webserver

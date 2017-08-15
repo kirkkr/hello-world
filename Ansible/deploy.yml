@@ -2,9 +2,6 @@
 
   hosts: all
   
-  vars_files:
-    - ansible_cfg.yml
-
   roles: 
     - hello-world
     
