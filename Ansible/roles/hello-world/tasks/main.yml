@@ -12,6 +12,7 @@
       file:
         path: "/var/www/html/hello-world"
         state: absent
+        force: yes
     
     - name: "Recreate target filesystem"
       become: true
@@ -20,16 +21,22 @@
         state: directory
         owner: root
         group: root
-        mode: 0644
+        mode: 0755
     
     - name: "Copy files"
       become: true
       copy:
-        src: "*"
-        dest: "/var/www/html/hello-world"
+        src: "/home/kevin/git/hello-world/publish/hello-world"
+        dest: "/var/www/html"
         owner: root
         group: root
-        mode: 0644
+        mode: 0755
     
+    - name: "Restart Apache2 Webserver"
+      become: true
+      service:
+        name: apache2
+        state: restarted
+
     - name: "Deployment Complete"
       debug: msg="Finished"
