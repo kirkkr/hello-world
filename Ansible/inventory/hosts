@@ -4,8 +4,8 @@ webservers
 [all:vars]
 ansible_ssh_user=ubuntu
 ansible_ssh_pass=ubuntu
-ansible_become_user=ubuntu
-ansible_become_pass=ubuntu
+ansible_become_user=root
+ansible_become_pass=root
 ansible_host_key_checking=false
 
 [webservers]
